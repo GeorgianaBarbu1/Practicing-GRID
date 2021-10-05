@@ -1,0 +1,73 @@
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 160px;
+    font-size: 50px;
+    
+}
+h1::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color:rgb(206, 150, 150);
+    transition: all .6s;
+}
+h1:hover::after{
+    width: 100%;
+}
+h1::before{
+    content: "";
+    background-image: url(d.png);
+    width: 25vw;
+    height: 35vh;
+    background-size: 250px;
+    background-position:contain;
+    background-repeat: no-repeat;
+    display: grid;
+    position: absolute;
+    top: 0px; right: 0px;
+    margin-right: -135px;
+    
+    
+    
+}
+.calendar{
+    padding: 5%;
+    color: white;
+    justify-content: center;
+    font-size: 4vh;
+    text-align: center;
+}
+.week{
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    
+    
+}
+.date{
+    display: grid;
+    margin-top: 5%;
+    height: 95vh;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr)
+}
+.date button{
+    background-color: rgb(199, 193, 193);
+    color: black;
+    font-size: 3vh;
+}
+.date button:hover{
+    box-shadow: inset -1px 3px 8px 5px #e7e8eb, 2px 5px 16px 0px #0B325E, 1px 5px 15px 5px rgba(0,0,0,0.82);
+background: #000000;
+color: white;
+}
+.date button:first-child{
+    grid-column: 5;
+    
+}
